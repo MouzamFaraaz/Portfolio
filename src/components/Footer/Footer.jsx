@@ -7,6 +7,8 @@ const Footer = () => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error(`Section with id "${sectionId}" not found.`);
     }
   };
 
@@ -21,9 +23,9 @@ const Footer = () => {
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
-            { name: "Projects", id: "projects" },
+            { name: "Projects", id: "work" },
             { name: "Education", id: "education" },
-            { name: "Contact", id: "contact" }, // Added Contact
+            { name: "Contact", id: "contact" },
           ].map((item, index) => (
             <button
               key={index}
